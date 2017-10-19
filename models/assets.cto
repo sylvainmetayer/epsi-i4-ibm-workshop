@@ -12,8 +12,6 @@ asset Car identified by numberplate {
     o String brand regex=/.+/
     o String model regex=/.+/
     o String status default = "OK" /* OK / Pending / Rejected */
-    o Double propositionPrice optional
-  	o Double propositionKM optional
   	--> Person propositionBuyer optional
     o Double price 
     o String image optional
@@ -35,8 +33,6 @@ transaction SellCar {
   --> Car car
   --> Person seller
   --> Person buyer
-  o Double price
-  o Double km
   o String password
 }
 
